@@ -1,8 +1,56 @@
 <html>
   <head>
     <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script type="text/javascript" src="js/cloth.js"></script> -->
   </head>
   <body>
-    초기 페이지 생성
+    <div class="mainContent">
+      <h1 id="title">Style Preview</h1>
+      <div class="cloth">
+        <img id="clothColor" src="img/t-shirt.png" />
+      </div>
+
+      <div class="colorList">
+        <div class="color" onclick="changeColor(0)"></div>
+        <div class="color" onclick="changeColor(1)"></div>
+        <div class="color" onclick="changeColor(2)"></div>
+        <div class="color" onclick="changeColor(3)"></div>
+        <div class="color" onclick="changeColor(4)"></div>
+        <div class="color" onclick="changeColor(5)"></div>
+      </div>
+    </div>
+
+    <script>
+      let colorGroup = document.getElementsByClassName('color');
+      let backgroundColor = [
+        '#FFAEBC',
+        '#A0E7E5',
+        '#B4F8C8',
+        '#0000FF',
+        '#050A30',
+      ];
+      let cloth = document.getElementById('clothColor');
+
+      for (let i = 0; i < colorGroup.length; i++) {
+        colorGroup[i].setAttribute(
+          'style',
+          'background-color:' + backgroundColor[i] + ';',
+        );
+      }
+
+      function changeColor(index) {
+        cloth.setAttribute(
+          'style',
+          'filter:opacity(0.5) drop-shadow(0 0 0 ' +
+            backgroundColor[index] +
+            ')',
+        );
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,71 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+ul,
+ol,
+p,
+span,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #ececec;
+  font-family: 'Noto Sans KR', serif;
+}
+
+/**************초기화 코드 끝*******************/
+
+/* 메인 영역 */
+.mainContent {
+  margin: 15px 25px;
+  min-height: 600px;
+}
+
+#title {
+  text-align: right;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+.cloth {
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 50px 0;
+  position: relative;
+}
+.cloth img {
+  height: 500px;
+}
+
+.colorList {
+  margin: 0 10px;
+}
+
+.color {
+  border: 1px solid #e7f2f8;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+.color:hover {
+  filter: drop-shadow(3px 3px 3px gray);
+}
+/* img {
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 black);
+  filter: opacity(0.5) drop-shadow(0 0 0 yellow);
+} */
